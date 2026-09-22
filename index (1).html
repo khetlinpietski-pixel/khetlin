@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+        <title>Blog</title>
+        <style>
+            header{
+            background-color: rgb(238, 109, 109);
+                color: #000000;
+                text-align: center;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 16px;
+                border: 5px solid
+                 #FFFFFF;
+            
+            }
+            main {
+                background-color: #ffffff;
+                color: rgb(49, 27, 27);
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 16px;
+            }
+            article{
+                display: flex;
+
+            }
+
+            img{
+                width: 80px;
+                height: 80px;
+            }
+
+            .artigo-autor {
+                font-weight: bold;
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Meu blog</h1>
+            <p>Vou compartilhar conhecimentos sobre game</p>
+        </header>
+
+     <main>
+    <article>
+             
+            <img src="mario.png" alt="Ilustração em pixel art do Super Mario correndo da esquerda para a direita em uma fase clássica. Mario veste seu boné vermelho, camiseta vermelha e macacão azul com botões amarelos. Ao fundo, há um céu azul claro com nuvens brancas pixeladas, colinas verdes e um chão de blocos amarelos e verdes.">
+        
+        <div>
+            <h2>Meu primeiro post</h2>
+            <p class="artigo-autor">Por: Khetlin pietski</p>
+            <p>Sejam bem vindos ao meu blog! Aqui vou comentar sobre um jogo famoso nos anos de 80 aos dias atuais.</p>
+            <button>👍​ <span>0</span></button>
+            <button>👎 <span>0</span>​</button>
+        </div>
+            
+    </article>
+    <article>
+        <img src="crie.jpg" alt="ilustração em pixel de varias pessoas nos anos 80 esperando sua vez para jogar mario bos no fliperama.">
+        <div>
+            <h2>Meu segundo Post</h2>
+            <p>Não importa quantos anos passem, a música do Mundo 1-1 de Super Mario Bros. continua tocando no automático na cabeça de todo mundo. O verdadeiro teste de paciência da infância era ouvir que a princesa estava em outro castelo depois de passar sufoco em uma fase inteira. 🍄 Castle clearance nos anos 80 e 90 era puro suor! #SuperMario #RetroGaming #Nostalgia #Nintendo</p>
+            <button>👍​ <span>0</span></button>
+            <button>👎 <span>0</span>​</button>
+        </div>
+
+    </article>
+            
+            
+    </main>
+
+
+</body>
+<script>
+    const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(function(botao){
+        let curtiu = false;
+        botao.addEventListener("click", botaoClicado);
+    function botaoClicado(){
+        console.log("fui clicado");
+        let texto = botao.querySelector("span");
+        if(curtiu === false){
+            texto.textContent++;
+            curtiu = true;
+        } else{
+            texto.textContent--;
+            curtiu = false;
+        } 
+    }
+
+    })
+    
+  
+</script>
+</html>
